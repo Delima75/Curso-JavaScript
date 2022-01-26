@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrangeiro</title>
+    <style>
+        body{
+            background-color: lightblue;
+            color: purple;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de imigração</h1>
+    Qual é seu país: <input type="text" name="txname" id="txname">
+    <input type="button" value="apertar" onclick="apertar()">
+   <div id='local'>Você é ... </div>
+
+   <script>
+    function apertar() {
+        var txn  = window.document.getElementById('txname')
+        var loc  = window.document.getElementById('local')
+        var pais = txn.value
+        local.innerHTML = `Seu Local é ${pais}`
+            if (pais != 'Brasil') {
+            local.innerHTML = `Vocé é Estrangeiro`
+        }
+        else {
+            local.innerHTML = `Vocé é Brasileiro`
+        }
+             
+    }   
+
+   </script>
+
+
+
+
+    
+</body>
+</html>

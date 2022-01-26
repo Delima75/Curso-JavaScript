@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dias da Semana</title>
+    <Style>
+        body{
+            background-color: lightblue;
+        }
+        p{
+         font-size: 25px;
+         font-family: Arial, Helvetica, sans-serif;    
+        
+        }
+        div{
+            font-size: 35px;
+         font-family: Verdana, Geneva, Tahoma, sans-serif
+
+        }
+    </Style>
+</head>
+<body>
+    <h1>Semana</h1>
+    <p>Que dia é hoje? <input type="button" value="Aperte Aqui para saber" name="pergunta" id="pergunta" onclick="dias()">  </p>
+    <div id="resp">...</div>
+
+
+    <script>
+        
+        function dias(){
+            var agora = new Date()
+            var diaSem = agora.getDay()  
+          //  diaSem = 8   esta linha esta forçanmdo um valor manual 
+                  
+            //console.log(diaSem)
+
+            switch(diaSem) {
+            case  0:
+                console.log('Domingo')
+                break
+            case 1:
+                console.log('Segunda-feira')
+                break    
+            case 2:
+                console.log('terça-feira')
+                break
+            case 3:
+                console.log('quarta-feira')
+                break
+            case 4:
+                console.log('quinta-feira')
+                break    
+            case 5:
+                console.log('sexta-feira')
+                break
+            case 6:
+            console.log('sábado')
+                break 
+            default:                   
+            console.log('[ERRO] Dia invalido')
+                break
+        }
+
+                   
+    
+            var res = window.document.getElementById('resp')
+            res.innerText = (`O dia hoje é: ${diaSem}` )
+           /* 
+
+                if (diaSem <= 6){
+                    res.innerText = (`${case3}`)
+                    } else{
+                    res.innerText = ('É outro dia.')
+                         }    
+         */                   
+        }
+        
+    
+
+    
+    
+    
+    </script>
+   
+   
+
+</body>
+</html>
